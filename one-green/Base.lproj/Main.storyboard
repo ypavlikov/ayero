@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="703-4V-yAM">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Root View Controller-->
+        <scene sceneID="clB-vc-fyl">
+            <objects>
+                <viewController storyboardIdentifier="Root" id="703-4V-yAM" customClass="RootViewController" customModule="Ayero" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="I7W-xW-C47"/>
+                        <viewControllerLayoutGuide type="bottom" id="IfR-02-kHw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="502-Ir-ELC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q3h-pU-vEd" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-101" y="-243"/>
+        </scene>
+        <!--Tech Screen-->
+        <scene sceneID="snT-py-3hH">
+            <objects>
+                <viewController storyboardIdentifier="DataViewController" title="Tech Screen" id="S4R-Ja-viH" customClass="DataViewController" customModule="Ayero" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fXf-Jd-eTc"/>
+                        <viewControllerLayoutGuide type="bottom" id="EPS-s9-h4K"/>
+                    </layoutGuides>
+                    <view key="view" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="ZwX-cT-FIQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsBuildings="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iy5-Ai-i6A">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </mapView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hKV-Nc-DjZ" customClass="SimpleChart" customModule="Ayero" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="414" height="90"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="b9L-ck-M1K"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yx2-H3-bjD" customClass="StartButton" customModule="Ayero" customModuleProvider="target">
+                                <rect key="frame" x="45" y="631" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Ydr-Cv-7xg"/>
+                                    <constraint firstAttribute="width" constant="60" id="nG7-CC-LZ7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                        <color key="value" red="1" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="routeStart:" destination="S4R-Ja-viH" eventType="touchUpInside" id="WUt-XY-bMF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JAF-Qe-bPv" customClass="LoadRouteButton" customModule="Ayero" customModuleProvider="target">
+                                <rect key="frame" x="309" y="631" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="9kq-SM-Ox2"/>
+                                    <constraint firstAttribute="height" constant="60" id="pKi-dW-K8f"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Load">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                        <color key="value" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="loadRouteMap:" destination="S4R-Ja-viH" eventType="touchUpInside" id="aEk-mi-Mir"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Yx2-H3-bjD" firstAttribute="leading" secondItem="ZwX-cT-FIQ" secondAttribute="leading" constant="45" id="07P-3z-ctj"/>
+                            <constraint firstItem="hKV-Nc-DjZ" firstAttribute="leading" secondItem="ZwX-cT-FIQ" secondAttribute="leading" id="4Vv-Zs-ghk"/>
+                            <constraint firstAttribute="trailing" secondItem="JAF-Qe-bPv" secondAttribute="trailing" constant="45" id="AFC-Wn-tSg"/>
+                            <constraint firstAttribute="bottom" secondItem="iy5-Ai-i6A" secondAttribute="bottom" id="HMm-wz-g33"/>
+                            <constraint firstAttribute="bottom" secondItem="iy5-Ai-i6A" secondAttribute="bottom" id="HMx-qA-Zqh"/>
+                            <constraint firstAttribute="trailing" secondItem="hKV-Nc-DjZ" secondAttribute="trailing" id="M9f-na-TS4"/>
+                            <constraint firstItem="iy5-Ai-i6A" firstAttribute="top" secondItem="ZwX-cT-FIQ" secondAttribute="top" id="NEj-Bh-efS"/>
+                            <constraint firstItem="EPS-s9-h4K" firstAttribute="top" secondItem="Yx2-H3-bjD" secondAttribute="bottom" constant="45" id="Roq-2Q-YKb"/>
+                            <constraint firstItem="EPS-s9-h4K" firstAttribute="top" secondItem="JAF-Qe-bPv" secondAttribute="bottom" constant="45" id="Xht-LS-skk"/>
+                            <constraint firstAttribute="trailing" secondItem="iy5-Ai-i6A" secondAttribute="trailing" id="koJ-ch-XBw"/>
+                            <constraint firstItem="hKV-Nc-DjZ" firstAttribute="top" secondItem="fXf-Jd-eTc" secondAttribute="bottom" id="lhS-Fu-aSr"/>
+                            <constraint firstItem="iy5-Ai-i6A" firstAttribute="leading" secondItem="ZwX-cT-FIQ" secondAttribute="leading" id="z4X-dc-WPB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="barChart" destination="hKV-Nc-DjZ" id="jfC-ii-ENl"/>
+                        <outlet property="btnLoadRoute" destination="JAF-Qe-bPv" id="K54-XE-Fqy"/>
+                        <outlet property="btnStart" destination="Yx2-H3-bjD" id="Jha-SI-rjM"/>
+                        <outlet property="mapView" destination="iy5-Ai-i6A" id="LHz-t0-w9V"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GmD-Rr-ZGN" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="592.75362318840587" y="-244.56521739130437"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="c9M-IT-h1i">
+            <objects>
+                <viewController storyboardIdentifier="Mapbox" id="hYh-Rh-mT5" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Lst-at-TOo"/>
+                        <viewControllerLayoutGuide type="bottom" id="opT-Ka-Oec"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="krz-eS-qqo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O7L-WO-HKm" customClass="MGLMapView">
+                                <rect key="frame" x="0.0" y="20" width="414" height="716"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="styleURL__" value="mapbox://styles/mapbox/satellite-streets-v9"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="latitude">
+                                        <real key="value" value="37.659024491480103"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="longitude">
+                                        <real key="value" value="-121.85819422826171"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="zoomLevel">
+                                        <real key="value" value="14"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="allowsZooming" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="allowsScrolling" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="allowsRotating" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="allowsTilting" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="O7L-WO-HKm" firstAttribute="top" secondItem="Lst-at-TOo" secondAttribute="bottom" id="Fqf-Wd-TbU"/>
+                            <constraint firstItem="O7L-WO-HKm" firstAttribute="leading" secondItem="krz-eS-qqo" secondAttribute="leading" id="RGK-Cb-B47"/>
+                            <constraint firstItem="opT-Ka-Oec" firstAttribute="top" secondItem="O7L-WO-HKm" secondAttribute="bottom" id="jZL-JV-bcG"/>
+                            <constraint firstAttribute="trailing" secondItem="O7L-WO-HKm" secondAttribute="trailing" id="ke0-tC-WXK"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zYd-ly-ELW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="592.75362318840587" y="416.57608695652175"/>
+        </scene>
+        <!--Stats View Controller-->
+        <scene sceneID="SEF-XY-2uK">
+            <objects>
+                <viewController storyboardIdentifier="StatsViewController" id="K0s-t6-WJF" customClass="StatsViewController" customModule="Ayero" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WND-ML-ccd"/>
+                        <viewControllerLayoutGuide type="bottom" id="gSF-2C-pfb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="slP-jm-zaX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h9U-Kd-faN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1292" y="-243"/>
+        </scene>
+        <!--Login-->
+        <scene sceneID="8YO-B5-TKn">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="Login" storyboardName="Login" referencedIdentifier="Login" id="Xid-t9-wgP" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6KT-vI-lod" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-954" y="-244"/>
+        </scene>
+    </scenes>
+</document>
